@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --DARKCYAN: hsl(158, 36%, 37%);
+  --CREAM: hsl(30, 38%, 92%);
+
+  --VERYDARKBLUE: hsl(212, 21%, 14%);
+  --DARKGRAYISHBLUE: hsl(228, 12%, 48%);
+  --WHITE: hsl(0, 0%, 100%);
+}
+
+/* 
+font-family: "Montserrat", sans-serif;
+font-family: "Fraunces", serif;
+*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 100vh;
+  background-color: var(--CREAM);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+  background-color: var(--WHITE);
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+
+.card-image {
+  background-color: var(--CREAM);
+}
+
+img {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.card-text {
+  padding: 0 1rem 2rem 1rem;
+}
+
+.card-text .perfume {
+  color: var(--DARKGRAYISHBLUE);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.card-text h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.card-text .description {
+  color: var(--DARKGRAYISHBLUE);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  word-spacing: 3px;
+}
+
+.card-text .div-prices {
+  margin-bottom: 1rem;
+}
+
+.card-text .div-prices p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-text .div-prices .price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  color: var(--DARKCYAN);
+  font-size: 2rem;
+}
+
+.card-text .div-prices s {
+  color: var(--DARKGRAYISHBLUE);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.btn {
+  font-weight: 700;
+  background-color: var(--DARKCYAN);
+  color: var(--WHITE);
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--VERYDARKBLUE);
+}
+
+@media only screen and (min-width: 380px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    max-width: 600px;
+  }
+
+  .card .card-image img {
+    border-bottom-left-radius: 0.8rem;
+    border-top-right-radius: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
